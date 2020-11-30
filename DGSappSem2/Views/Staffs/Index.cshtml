@@ -1,0 +1,67 @@
+﻿@model IEnumerable<DGSappSem2.Models.Staffs.Staff>
+
+@{
+    ViewBag.Title = "Manage Staff";
+}
+
+<h2>Manage Staff</h2>
+
+<p>
+    @Html.ActionLink("Add new staff", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Surname)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        <th>
+          <label>QR Code</label>
+        </th>
+      <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+      <td>
+        @Html.DisplayFor(modelItem => item.Name)
+     
+      </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Surname)
+        </td>
+
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNo)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Position)
+        </td>
+        <td class="fa fa-qrcode"> @Html.ActionLink("Create QR Card", "Details", new { id = item.StaffId }) </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.StaffId }) |
+           
+            @Html.ActionLink("Delete", "Delete", new { id=item.StaffId })
+        </td>
+    </tr>
+}
+
+</table>

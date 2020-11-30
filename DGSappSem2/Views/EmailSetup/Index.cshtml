@@ -1,0 +1,58 @@
+﻿@model DGSappSem2.Models.gmail
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body >
+    <div>
+        @using (Html.BeginForm("Index", "EmailSetup", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <center>
+                <h1>The student has been accepted and the confirmation email has been sent successfully</h1>
+                <table>
+                   
+                    @*<tr>
+                            <td style="width:80px">
+
+                                To:
+                            </td>
+                            <td>@Html.TextBoxFor(model=>model.To)</td>
+                        </tr>
+                         <tr>
+                             <td>
+
+                                 Subject:
+                             </td>
+                             <td>@Html.TextBoxFor(model => model.Subject)</td>
+                         </tr>
+                         <tr>
+                             <td valign="top">
+
+                                 Body:
+                             </td>
+                             <td>@Html.TextAreaFor(model => model.Body, new { rows = "15" ,cols ="25" })</td>
+                         </tr>
+                    *@
+                    <tr>
+                        <td>
+                            <input type="submit" value="Return to Manage Student Applications" />
+                        </td>
+                    </tr>
+
+                </table>
+
+
+            </center>
+        }
+    </div>
+    @* <div>
+            @Html.ActionLink("Return to Student Applications", "Index","Students")
+        </div>*@
+</body>
+</html>

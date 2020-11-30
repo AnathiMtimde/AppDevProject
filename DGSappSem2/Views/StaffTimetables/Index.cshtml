@@ -1,0 +1,41 @@
+@model IEnumerable<DGSappSem2.Models.Staffs.StaffTimetable>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Manage Staff Timetables</h2>
+
+<p>
+    @Html.ActionLink("Add new timetable", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Staff.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Term)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Staff.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Term)
+            </td>
+            <td>
+                @Html.ActionLink("View Timetable", "Details", new { id = item.StaffTimetableId }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.StaffTimetableId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.StaffTimetableId })
+            </td>
+        </tr>
+    }
+
+</table>

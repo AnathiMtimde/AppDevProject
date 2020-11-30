@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+<br />
+<br />
+@using (Html.BeginForm("ValidateCommand", "Paypal"))
+{
+    <div class="container">
+        <h2>Make School Fee Payments</h2>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">New Payment</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Enter deposit amount</h4>
+                    </div>
+                    <div class="modal-body">
+                        <br />
+                        product Name:
+                        <br />
+                        <p>
+                            <input type="text" name="product" value="Enter Payment option" />
+                        </p>
+                        <br />
+                        Deposit amount:
+                        <br />
+
+                        <p>
+                            R<input type="text" name="totalPrice" value="0.00" />
+                        </p>
+                        <br />
+                        <p>
+                            <input type="submit" name="btnConfirm" value="Click here for payment with Paypal" />
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+

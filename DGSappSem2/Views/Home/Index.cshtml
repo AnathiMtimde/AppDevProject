@@ -1,0 +1,143 @@
+﻿@{
+  ViewBag.Title = "Home Page";
+}
+<link rel="shortcut icon" href="img/favicon.png">
+<link href="~/Content1/bootstrap.css" rel="stylesheet" />
+<link href="~/Content1/AdminLayout/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content1/AdminLayout/css/bootstrap-theme.css" rel="stylesheet" />
+<link href="~/Content1/AdminLayout/css/elegant-icons-style.css" rel="stylesheet" />
+<link href="~/Content1/AdminLayout/css/font-awesome.css" rel="stylesheet" />
+<link href="~/Content1/AdminLayout/css/widgets.css" rel="stylesheet" />
+<link href="~/Content1/AdminLayout/css/style.css" rel="stylesheet" />
+<link href="~/Content1/AdminLayout/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" />
+
+<link href="~/Content1/AdminLayout/css/owl.carousel.css" rel="stylesheet" />
+<style>
+
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+  }
+
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+
+    div.gallery img {
+      width: 100%;
+      height: 100%;
+    }
+
+  div.desc {
+    padding: 15px;
+    text-align: center;
+    text-decoration-color:white
+  }
+  h3{
+    text-align:center;
+  }
+  
+</style>
+<header>
+  <div class="header-banner">
+    <div class="site-background">
+      @*<img src="~/Content/Image/Header.png" alt="Header" style="width:100%; height: 400px; ">*@
+      <h1> &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; Welcome </h1>
+      <h2 style="text-align:left">  &nbsp; &nbsp; &nbsp; The Best School in Kwa-Zulu Natal </h2>
+      @*<h3>The best school in the country[South Africa]</h3>
+        <p><a href='@Url.Action("About", "Home")' class="btn btn-primary btn-lg">About Us &raquo;</a></p>*@
+    </div>
+  </div>
+</header>
+@*<hr />
+<h3>Join <span style="color:blue;font-weight:bold"> Durban Girls Secondary School</span> today</h3>
+<h3>to start discovering thousand of content with minimum <span style="color:blue;font-weight:bold">effort and cost! </span></h3>
+<hr />*@
+<div class="col-md-offset-2">
+  <table style="background-color:black">
+    <tr>
+      <td>
+        <div class="gallery">
+
+          <a>
+            @Html.ActionLink("Contact", "Contact", "Home")
+            <img src="~/Content1/Image/1.png" alt="Contact Us" width="600" height="400">
+          </a>
+          <div class="desc">Access our contacts and make a query</div>
+        </div>
+      </td>
+      <td>
+        <div class="gallery">
+          <a>
+            @Html.ActionLink("About Us", "About", "Home")
+            <img src="~/Content1/Image/2.png" alt="About Us" width="600" height="400">
+          </a>
+          <div class="desc">Get to Know us better by reading about us</div>
+        </div>
+      </td>
+      <td>
+        <div class="gallery">
+          <a>
+            @Html.ActionLink("Gallery", "Contact", "Home")
+            <img src="~/Content1/Image/5.png" alt="Gallery" width="600" height="400">
+          </a>
+          <div class="desc">View our images capturing moments</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+@*<div class="row">
+    <div class="col-md-4">
+      <div class="gallery">
+        <a target="_blank" href="img_lights.jpg">
+          <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="gallery">
+        <a target="_blank" href="img_mountains.jpg">
+          <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+      </div>
+    </div>*@
+
+@*@{
+      ViewBag.Title = "Home Page";
+  }
+
+  <div class="jumbotron">
+      <h1>ASP.NET</h1>
+      <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+      <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+  </div>
+
+  <div class="row">
+      <div class="col-md-4">
+          <h2>Getting started</h2>
+          <p>
+              ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+              enables a clean separation of concerns and gives you full control over markup
+              for enjoyable, agile development.
+          </p>
+          <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+          <h2>Get more libraries</h2>
+          <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+          <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+          <h2>Web Hosting</h2>
+          <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+          <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+      </div>*@

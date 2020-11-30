@@ -1,0 +1,111 @@
+﻿@model List<DGSappSem2.Models.AssessmentBusiness.StudentViewModel>
+
+@{
+
+    ViewBag.Title = "Create";
+}
+<script src="~/Scripts/jquery-3.1.1.js"></script>
+
+<h2> @ViewBag.AssessmentName </h2>
+<br />
+<h3>@ViewBag.GradeName / @ViewBag.Subject / Term @ViewBag.Term /</h3>
+<br />
+
+@using (Html.BeginForm("Create", "StudentAssessments", FormMethod.Post))
+{
+
+    <input id="AssessmentId"
+           name="AssessmentId"
+           type="hidden"
+           value=@ViewBag.AssessmentId /> 
+           
+     <input id="ClassroomId"
+           name="ClassroomId"
+           type="hidden"
+           value= @ViewBag.ClassroomId />
+
+    <div class="form-group">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <table class="table">
+            <tr>
+
+
+                <th>
+                    @Html.DisplayName("Student ID")
+                </th>
+
+                <th>
+                    @Html.DisplayName("Name")
+                </th>
+                <th>
+                    @Html.DisplayName("Surname")
+                </th>
+                <th>
+                    @Html.DisplayName("Provide Mark")
+                </th>
+
+            </tr>
+
+
+            @for (int i = 0; i < Model.Count(); i++)
+            {
+                <tr>
+
+
+                    @Html.HiddenFor(model => model[i].StID)
+                    @Html.HiddenFor(model => model[i].AssessmentId)
+
+
+                    <td>
+                        @Html.DisplayFor(model => model[i].StID)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(model => model[i].StudentName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model[i].StudentSurname)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(model => model[i].Mark)
+                    </td>
+                </tr>
+            }
+
+        </table>
+        <div class="form-group">
+            <div >
+                <input type="submit" value="Submit Mark" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+    function bs_input_file() {
+        $(".input-file").before(
+            function () {
+                if (!$(this).prev().hasClass('input-ghost')) {
+                    var element = $("<input type='file' id='dataFile' name='upload' class='input-ghost' style='visibility:hidden; height:0'>");
+                    element.attr("name", $(this).attr("name"));
+                    element.change(function () {
+                        element.next(element).find('input').val((element.val()).split('\\').pop());
+                    });
+                    $(this).find("button.btn-choose").click(function () {
+                        element.click();
+                    });
+                    $(this).find("button.btn-reset").click(function () {
+                        element.val(null);
+                        $(this).parents(".input-file").find('input').val('');
+                    });
+                    $(this).find('input').css("cursor", "pointer");
+                    $(this).find('input').mousedown(function () {
+                        $(this).parents('.input-file').prev().click();
+                        return false;
+                    });
+                    return element;
+                }
+            }
+        );
+    }
+</script>

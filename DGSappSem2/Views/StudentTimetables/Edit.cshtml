@@ -1,0 +1,810 @@
+@model DGSappSem2.Models.Students.StudentTimetable
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="w3-container w3-center">
+        <h1>EDIT TIME TABLE</h1>
+    </div>
+    @using (Html.BeginForm())
+    {
+        <div class="w3-container w3-center">
+
+            @Html.LabelFor(model => model.ClassName)
+            @Html.DropDownListFor(model => model.ClassName,
+              new[] { new SelectListItem { Text = "8A", Value = "8A" },
+                      new SelectListItem { Text = "8B", Value = "8B" },
+                      new SelectListItem { Text = "8C", Value = "8C" },
+                      new SelectListItem { Text = "9A", Value = "9A" },
+                      new SelectListItem { Text = "9B", Value = "9B" },
+                      new SelectListItem { Text = "9C", Value = "9C" },
+                      new SelectListItem { Text = "10A", Value = "10A" },
+                      new SelectListItem { Text = "10B", Value = "10B" },
+                      new SelectListItem { Text = "10C", Value = "10C" },
+                      new SelectListItem { Text = "11A", Value = "11A" },
+                      new SelectListItem { Text = "11B", Value = "11B" },
+                      new SelectListItem { Text = "11C", Value = "11C" },
+                      new SelectListItem { Text = "12A", Value = "12A" },
+                      new SelectListItem { Text = "12B", Value = "12B" },
+                      new SelectListItem { Text = "12C", Value = "12C" }
+              })
+
+
+
+        </div>
+
+        <div class="w3-container w3-center">
+
+            @Html.LabelFor(model => model.Term)
+
+            @Html.DropDownListFor(time => time.Term,
+       new[] { new SelectListItem { Text = "Term1", Value = "Term1" },
+               new SelectListItem { Text = "Term2", Value = "Term2" },
+               new SelectListItem { Text = "Term3", Value = "Term3" },
+               new SelectListItem { Text = "Term4", Value = "Term4" }
+       })
+
+        </div>
+        <div class="w3-container w3-center">
+            <table border="5" cellspacing="0" align="center">
+                <!--<caption>Timetable</caption>-->
+
+
+                <tr>
+
+                    <td align="center" height="50"
+                        width="100">
+                        <br>
+                        <b>Day/Period</b>
+                    </td>
+                    <td align="center" height="50"
+                        width="100">
+                        <b>I<br>8:00-9:00</b>
+                    </td>
+                    <td align="center" height="50"
+                        width="100">
+                        <b>II<br>9:00-10:00</b>
+                    </td>
+                    <td align="center" height="50"
+                        width="100">
+                        <b>III<br>10:00-11:00</b>
+                    </td>
+                    <td align="center" height="50"
+                        width="100">
+                        <b>11:00-12:00</b>
+                    </td>
+                    <td align="center" height="50"
+                        width="100">
+                        <b>IV<br>12:00-1:00</b>
+                    </td>
+                    <td align="center" height="50"
+                        width="100">
+                        <b>V<br>1:00-2:00</b>
+                    </td>
+                    <td align="center" height="50"
+                        width="100">
+                        <b>VI<br>2:00-3:00</b>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td align="center" height="50">
+                        <b>Monday</b>
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.M1,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.M2,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.M3,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td rowspan="6" align="center" height="50">
+                        <h2>L<br>U<br>N<br>C<br>H</h2>
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.M4,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.M5,
+                new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.M6,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="50">
+                        <b>Tuesday</b>
+                    </td>
+
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.T1,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.T2,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.T3,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.T4,
+                new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.T5,
+                new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.T6,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="50">
+                        <b>Wednesday</b>
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.W1,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.W2,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.W3,
+                new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.W4,
+                new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.W5,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.W6,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+
+                </tr>
+                <tr>
+                    <td align="center" height="50">
+                        <b>Thursday</b>
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.Th1,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.Th2,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.Th3,
+                new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.Th4,
+                new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.Th5,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.Th6,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+
+                </tr>
+                <tr>
+                    <td align="center" height="50">
+                        <b>Friday</b>
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.F1,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.F2,
+                new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.F3,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.F4,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.F5,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+                    <td align="center" height="50">
+                        @Html.DropDownListFor(time => time.F6,
+               new[] { new SelectListItem { Text = "English", Value = "English" },
+                       new SelectListItem { Text = "Mathematics", Value = "Mathematics" },
+                       new SelectListItem { Text = "Afrikaans", Value = "Afrikaans" },
+                       new SelectListItem { Text = "Zulu", Value = "Zulu" },
+                       new SelectListItem { Text = "Life Orientation", Value = "Life Orientation" },
+                       new SelectListItem { Text = "Geography", Value = "Geography" },
+                       new SelectListItem { Text = "History", Value = "History" },
+                       new SelectListItem { Text = "I.T", Value = "I.T" },
+                       new SelectListItem { Text = "Bussiness Studies", Value = "Bussiness Studies" },
+                       new SelectListItem { Text = "Accounting", Value = "Accounting" },
+                       new SelectListItem { Text = "Tourism", Value = "Tourism" },
+                       new SelectListItem { Text = "Social Science", Value = "Social Science" },
+                       new SelectListItem { Text = "Physics", Value = "Physics" },
+                       new SelectListItem { Text = "Arts/Culture", Value = "Arts/Culture" },
+                       new SelectListItem { Text = "Consumer Science", Value = "Consumer Science" },
+                       new SelectListItem { Text = "EGD", Value = "EGD" },
+                       new SelectListItem { Text = "Maths Lit", Value = "Maths Lit" }
+
+               })
+                    </td>
+
+                </tr>
+
+
+
+            </table>
+        </div>
+        <div class="w3-container w3-center">
+            <input type="submit" value="Save" class="w3-button w3-black" style="width:33.3%" />
+        </div>
+
+    }
+</body>
+
+</html>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

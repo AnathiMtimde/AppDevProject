@@ -1,0 +1,194 @@
+@model DGSappSem2.Models.Staffs.StaffTimetable
+
+@{
+    ViewBag.Title = "Details";
+}
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="w3-container w3-center">
+        <h1>VIEW TIME TABLE</h1>
+    </div>
+    <table border="5" cellspacing="0" align="center">
+        <!--<caption>Timetable</caption>-->
+
+
+        <tr>
+
+            <td align="center" height="50"
+                width="100">
+                <br>
+                <b>Day/Period</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>I<br>8:00-9:00</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>II<br>9:00-10:00</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>III<br>10:00-11:00</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>11:00-12:00</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>IV<br>12:00-1:00</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>V<br>1:00-2:00</b>
+            </td>
+            <td align="center" height="50"
+                width="100">
+                <b>VI<br>2:00-3:00</b>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td align="center" height="50">
+                <b>Monday</b>
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.M1)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.M2)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.M3)
+            </td>
+            <td rowspan="6" align="center" height="50">
+                <h2>L<br>U<br>N<br>C<br>H</h2>
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.M4)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.M5)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.M6)
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Tuesday</b>
+            </td>
+
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.T1)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.T2)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.T3)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.T4)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.T5)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.T6)
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Wednesday</b>
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.W1)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.W2)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.W3)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.W4)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.W5)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.W6)
+            </td>
+
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Thursday</b>
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.Th1)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.Th2)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.Th3)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.Th4)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.Th5)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.Th6)
+            </td>
+
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Friday</b>
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.F1)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.F2)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.F3)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.F4)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.F5)
+            </td>
+            <td align="center" height="50">
+                @Html.DisplayFor(model => model.F6)
+            </td>
+
+        </tr>
+
+
+
+    </table>
+
+
+</body>
+
+</html>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

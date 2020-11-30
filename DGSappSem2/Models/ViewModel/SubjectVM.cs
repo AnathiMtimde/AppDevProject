@@ -1,0 +1,19 @@
+﻿using AssessmentBusiness;
+using System.Collections.Generic;
+
+namespace DGSappSem2.Models.ViewModel
+{
+    public class SubjectVM
+    {
+        public int SubjectID { get; set; }
+        public string SubjectName { get; set; }
+        public int RequirementPercentage { get; set; }
+        public int Average { get; set; }
+        public int Mark { get; set; }
+        public string Comment { get; set; }
+        public string Upload { get; set; }
+        public List<Term> termLists { get; set; }
+        public List<AssessmentVM> assessments { get; set; }
+    }
+    
+}
