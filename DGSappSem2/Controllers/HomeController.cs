@@ -12,6 +12,10 @@ namespace DGSappSem2.Controllers
         {
             return View();
         }
+        public ActionResult Gallery()
+        {
+            return View();
+        }
 
         public ActionResult About()
         {

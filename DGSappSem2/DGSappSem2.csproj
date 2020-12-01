@@ -734,6 +734,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Views\Home\Gallery.cshtml" />
     <None Include="Views\StaffTimetables\Create.cshtml" />
     <None Include="Views\StaffTimetables\Delete.cshtml" />
     <None Include="Views\StaffTimetables\Details.cshtml" />
